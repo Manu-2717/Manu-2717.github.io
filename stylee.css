@@ -1,0 +1,8 @@
+a:hover {
+    color:aqua;
+    text-decoration:underline;
+    text-decoration-color:red;
+    text-decoration-thickness: 2px;
+    transition: all 0.3s ease;
+    text-decoration-style: wavy;
+}
