@@ -1,13 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+      justify-content: center;
+      display: flex;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #111111;
+    }
+
+    .input-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #myTable {
+      margin: 20px auto;
+      width: 80%;
+      border-collapse: collapse;
+    }
+
+    #myTable th, #myTable td {
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <p style="border:1px solid red">dsgfadsgas</p>
-  <br>
-  <p>asdgadsg</p>
+
+<ul>
+  <li><a href="index.html"><img src="Home_icon.jpeg" alt="Meyank's photo" width="20" height="20" class="circular-image"></a></li>
+  <li><a href="about_me.html">ABOUT ME</a></li>
+  <li><a href="my_hobbies.html">MY HOBBIES</a></li>
+  <li><a href="my_quali.html">MY QUALIFICATIONS</a></li>
+  <li><a href='my_projects.html'>MY PROJECTS</a></li>
+  <li><a href='remarks.html'>REMARKS</a></li>
+</ul>
+
+<div class="input-section">
+  <input type="text" id="myInput" placeholder="Enter name">
+  <input type="text" id="myInput2" placeholder="Enter remark">
+  <button onclick="addToTable()">Add</button>
+</div>
+
+<table border="1" id="myTable">
+  <tr>
+    <th>NAME</th>
+    <th>REMARK</th>
+  </tr>
+</table>
+
+<script>
+function addToTable() {
+  var inputValue = document.getElementById("myInput").value;
+  var inputValue2 = document.getElementById("myInput2").value;
+
+  if (inputValue.trim() === "" || inputValue2.trim() === "") return;
+
+  var table = document.getElementById("myTable");
+  var newRow = table.insertRow();
+
+  var cell = newRow.insertCell(0);
+  var cell2 = newRow.insertCell(1);
+
+  cell.innerHTML = inputValue;
+  cell2.innerHTML = inputValue2;
+
+  document.getElementById("myInput").value = "";
+  document.getElementById("myInput2").value = "";
+}
+</script>
+
+<link rel="stylesheet" href="stylee.css">
+</body>
+<script>
+  let x = true;
+  function myfunction() {
+    if (x) {
+      document.body.style.backgroundColor = "lightblue";
+    } else {
+      document.body.style.backgroundColor = "white";
+    }
+    x = !x;
+    }
+
+</script>
+<style>
+  .circular-image {
+    border-radius: 50%;
+    border: 1px solid black; /* Change color and thickness here */
+    object-fit: cover;
+  }
+</style>
+<button class = 'button' onclick="myfunction()">change BG</button>
+<body>
+  <p class="button"></p>
 </body>
 </html>
