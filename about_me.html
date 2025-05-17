@@ -2,135 +2,99 @@
 <html lang="en">
 <head>
     <title>About_me</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylee.css">
-<style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333333;
-      justify-content: center;
-      display: flex;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: #111111;
-    }
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            text-decoration: none;
+            height: 60px;
+        }
+
+        li a:hover {
+            background-color: #111111;
+        }
+
+        .circular-image {
+            border-radius: 50%;
+            border: 1px solid black;
+            object-fit: cover;
+            width: 20px;   /* Match the icon size from index.html */
+            height: 20px;
+        }
+
+        .circular-imagee {
+            border-radius: 50%;
+            border: 1px solid black;
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 3px solid black;
+        }
+
+        th, td {
+            background-color: beige;
+            text-align: center;
+            padding: 15px;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
     </style>
+</head>
+
 <body style="text-align: center;">
     <ul>
-        <li><a href="index.html"><img src="Home_icon.jpeg" alt="Meyank's photo" width="20" height="20" class="circular-image"></a></li>
-      
+        <!-- ✅ Removed width/height attributes, relying solely on CSS class -->
+        <li><a href="index.html"><img src="Home_icon.jpeg" alt="Home" class="circular-image"></a></li>
         <li><a href="about_me.html">ABOUT ME</a></li>
         <li><a href="my_hobbies.html">MY HOBBIES</a></li>
         <li><a href="my_quali.html">MY QUALIFICATIONS</a></li>
-        <li><a href='remarks.html'>REMARKS</a></li>
-        
-      </ul>
-      </body>
-<body style="text-align:center;">
-    
-    <h1 style="text-align: center; ">ABOUT ME</h1>
-    <img src="ME_PHOTO.jpeg" alt="Meyank's photo" width="200" height="200" class="circular-imagee">
-    <table>
+        <li><a href="my_projects.html">MY PROJECTS</a></li>
+        <li><a href="remarks.html">REMARKS</a></li>
+    </ul>
+
+    <h1>ABOUT ME</h1>
+    <img src="ME_PHOTO.jpeg" alt="Meyank's photo" class="circular-imagee">
+
+    <table align="center">
         <tr>
-            <th>
-                NAME
-            </th>
-            <th>
-                AGE
-            </th>
-            <th>
-                ADDRESS
-            </th>
-            <th>
-                PHONE
-            </th>
-            <th>
-                RELIGION
-            </th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>ADDRESS</th>
+            <th>PHONE</th>
+            <th>RELIGION</th>
         </tr>
         <tr>
-            <td>
-                MEYANK
-            </td>
-            <td>
-                17
-            </td>
-            <td>
-                1234 Elm Street, Springfield
-            </td>
-            <td>
-                123-456-7890
-            </td>
-            <td>
-                HINDU
-            </td>
+            <td>MEYANK</td>
+            <td>17</td>
+            <td>1234 Elm Street, Springfield</td>
+            <td>123-456-7890</td>
+            <td>HINDU</td>
         </tr>
     </table>
-
-    
-<style>
-    table, th, td {
-        border: 3px solid black;
-    }
-    th, td {
-        background-color: beige;
-        text-align: center;
-        padding: 15px;
-        font-family: sans-serif;
-        font-size: 20px;
-    }
-    img {
-        border-radius: 50%;
-        margin-top: 20px;
-    }
-</style>
-<style>
-    .circular-imagee {
-      border-radius: 50%;
-      border: 10px solid black; /* Change color and thickness here */
-      object-fit: cover;
-    }
-  </style>
-  <style>
-    .circular-image {
-      border-radius: 50%;
-      border: 1px solid black; /* Change color and thickness here */
-      object-fit: cover;
-    }
-  </style>
-    
-    
 </body>
 </html>
- <script>
-    let x = true;
-    function myfunction() {
-      if (x) {
-        document.body.style.backgroundColor = "lightblue";
-      } else {
-        document.body.style.backgroundColor = "white";
-      }
-      x = !x;
-      }
-
-  </script>
-  <button class = 'button' onclick="myfunction()">change BG</button>
-  <body>
-    <p class="button"></p>
-  </body>
