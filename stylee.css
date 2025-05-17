@@ -66,7 +66,7 @@ body::before {
     position: absolute;
     inset: 0;
     transform:
-    rotatex(-10deg)
+    rotatex(0deg)
       rotateY(calc((var(--position) - 1) * (360deg / var(--quantity))))
       translateZ(550px);
   }
