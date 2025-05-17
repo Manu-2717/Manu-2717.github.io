@@ -71,11 +71,6 @@ body::before {
       translateZ(550px);
   }
   
-  .banner .slider .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
   
   @keyframes autorun {
     from {
