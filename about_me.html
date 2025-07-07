@@ -4,15 +4,11 @@
     <title>About_me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <style>
-        
-    </style>
 </head>
 
 <body style="text-align: center;">
     <ul>
-        
-        <li><a href="index.html"><img src="Home_iconn.jpeg" width="26" height="26"></a></li>
+        <li><a href="index.html"><img src="home.png" width="26" height="26"></a></li>
         <li><a href="about_me.html">ABOUT ME</a></li>
         <li><a href="my_hobbies.html">MY HOBBIES</a></li>
         <li><a href="my_quali.html">MY QUALIFICATIONS</a></li>
@@ -20,24 +16,24 @@
         <li><a href="remarks.html">REMARKS</a></li>
     </ul>
 
-    <h1>ABOUT ME</h1>
-    <img src="ME_PHOTO.jpeg" alt="Meyank's photo" class="circular-imagee">
+    <div class="circle-mask">
+        <img class="full-img" src="dragon_3.jpg" width="8" height="10" alt="Full Background Image">
+    </div>
 
-    <table align="center">
-        <tr>
-            <th>NAME</th>
-            <th>AGE</th>
-            <th>ADDRESS</th>
-            <th>PHONE</th>
-            <th>RELIGION</th>
-        </tr>
-        <tr>
-            <td>MEYANK</td>
-            <td>17</td>
-            <td>1234 Elm Street, Springfield</td>
-            <td>123-456-7890</td>
-            <td>HINDU</td>
-        </tr>
-    </table>
+    <div class="intro">
+        <h1>I'M MEYANK.</h1>
+        <p>I'm a freelance <span class="dynamic-text" id="dynamicWord">coffee drinker.</span></p>
+        <p>From DELHI.</p>
+    </div>
+
+    <script>
+        const words = ["developer.", "designer.", "creator.", "gamer."];
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % words.length;
+            document.getElementById("dynamicWord").textContent = words[index];
+        }, 2000);
+    </script>
 </body>
 </html>
