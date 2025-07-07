@@ -7,7 +7,7 @@
 
 <body style="text-align: center;">
   <ul>
-    <li><a href="index.html"><img src="Home_iconn.jpeg" width="26" height="26"></a></li>
+    <li><a href="index.html"><img src="home.png" width="26" height="26"></a></li>
       
       <li><a href="about_me.html">ABOUT ME</a></li>
       <li><a href="my_hobbies.html">MY HOBBIES</a></li>
@@ -35,3 +35,10 @@
       </div>
     </div>
   </body>
+  <script>
+    setInterval(() => {
+      // Generate a random number to force a new image
+      const rand = Math.floor(Math.random() * 1000);
+      document.banner .slider .item.style.backgroundImage = `url('https://picsum.photos/1200/800?random=${rand}')`;
+    }, 10000); // 10 seconds = 10000 milliseconds
+  </script>
